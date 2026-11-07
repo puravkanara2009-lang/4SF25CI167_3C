@@ -1,0 +1,28 @@
+file,column,type,description
+european_material_deprivation_quickstart.csv,country_code,string,"Eurostat country code (e.g. DE, FR; EL = Greece, UK = United Kingdom; EU27_2020 = European Union)"
+european_material_deprivation_quickstart.csv,country_iso2,string,"ISO 3166-1 alpha-2 code for joining with other data (GR, GB, ...); empty for country groups"
+european_material_deprivation_quickstart.csv,country,string,Country name
+european_material_deprivation_quickstart.csv,period,string,"Period as published (YYYY, e.g. 2024)"
+european_material_deprivation_quickstart.csv,date,string,"First day of the period (YYYY-MM-DD), handy for plotting"
+european_material_deprivation_quickstart.csv,year,integer,Calendar year
+european_material_deprivation_quickstart.csv,deprivation_rate_pct,number,Share of all people who are severely materially and socially deprived (%)
+european_material_deprivation_quickstart.csv,women_pct,number,Same share among women (%)
+european_material_deprivation_quickstart.csv,men_pct,number,Same share among men (%)
+european_material_deprivation_quickstart.csv,children_pct,number,Same share among people under 18 (%)
+european_material_deprivation_quickstart.csv,adults_18_64_pct,number,Same share among people aged 18 to 64 (%)
+european_material_deprivation_quickstart.csv,seniors_65_plus_pct,number,Same share among people aged 65 or over (%)
+european_material_deprivation.csv / .parquet,country_code,string,"Eurostat country code (e.g. DE, FR; EL = Greece, UK = United Kingdom; EU27_2020 = European Union)"
+european_material_deprivation.csv / .parquet,country_iso2,string,"ISO 3166-1 alpha-2 code for joining with other data (GR, GB, ...); empty for country groups"
+european_material_deprivation.csv / .parquet,country,string,Country or country-group name
+european_material_deprivation.csv / .parquet,is_country_group,boolean,True for groups such as EU27_2020 or euro area aggregates (exclude them when comparing countries)
+european_material_deprivation.csv / .parquet,age_code,string,Age group code (see codes.csv)
+european_material_deprivation.csv / .parquet,age,string,Age group (label)
+european_material_deprivation.csv / .parquet,sex_code,string,Sex code (see codes.csv)
+european_material_deprivation.csv / .parquet,sex,string,Sex (label)
+european_material_deprivation.csv / .parquet,period,string,"Period as published (YYYY, e.g. 2024)"
+european_material_deprivation.csv / .parquet,date,string,"First day of the period (YYYY-MM-DD), handy for plotting"
+european_material_deprivation.csv / .parquet,year,integer,Calendar year
+european_material_deprivation.csv / .parquet,deprivation_rate_pct,number,"Severe material and social deprivation rate (%): share of people who cannot afford at least 7 of 13 basic items (for example a week of holiday, a meal with meat or fish every second day, replacing worn furniture, unexpected expenses, a car, keeping the home warm)"
+european_material_deprivation.csv / .parquet,flag,string,Eurostat status flag(s) for the value (empty = normal)
+european_material_deprivation.csv / .parquet,flag_meaning,string,Plain-English meaning of the flag
+codes.csv,dimension / code / label,string,Lookup of every code used in the files
